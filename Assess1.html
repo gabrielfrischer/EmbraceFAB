@@ -1,0 +1,460 @@
+<!DOCTYPE htsml>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+<nav role="navigation" class="black-text z-depth-0">
+    <div class="nav-wrapper container black-text"><a id="logo-container" href="index.html" class="brand-logo black-text"><span class="purple-text">Em</span>brace</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class= "black-text" href="sftHome.html">Senior Fitness Test</a></li>
+        <li><a class="black-text" href="sftHome.html">Fullerton Advanced Test</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav black-text">
+         <li><a href="sftHome.html">Senior Fitness Test</a></li>
+        <li><a href="fabtestHome.html">Fullerton Advanced Test</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons black-text">menu</i></a>
+    </div>
+  </nav>
+
+<br><br><br>
+
+<div class="row fixedClock">
+  <div class="col s12 center">
+  <!-- SVG TIMER -->
+  <svg height="200" width="200" class="comforta">
+    <!-- blur filter -->
+    <defs>
+      <filter id="blueBlur">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+      </filter>
+      <filter id="greyBlur" width="130%" height="130%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceAlpha"/>
+        <feColorMatrix in="offOut" result ="matrixOut" type="matrix"                           
+                                     values="0 1 0 0 0
+                                             0 1 0 0 0
+                                             0 1 0 0 0 
+                                             0 1 0 1 -.95" />
+        <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10"/>
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+       <feComposite in="SourceGraphic" in2="shadow" operator="over"/>
+      </filter>
+    </defs>
+    <!-- background circle -->
+    <circle  cx="100" cy="100" r="90" fill="white" stroke="whitesmoke" stroke-width="5" filter="url(#greyBlur)"/>
+    <!-- blur circle -->
+    <g class="timer" filter="url(#blueBlur)" transform="rotate(270, 100, 100)">
+      <circle cx="100" cy="100" r="90" stroke="#23619E" stroke-width="5" fill="none"/>
+    </g>
+    <g class="timer" transform="rotate(270, 100, 100)">
+      <circle cx="100" cy="100" r="90" stroke="#23619E" stroke-width="5" fill="none"/></circle>
+    </g>
+    <text x="100" y="100" class="silver comforta" id="timerText">15</text>
+    <text x="100" y="130" id="seconds" class="comforta">seconds</text>
+  </svg>
+  
+
+  
+</div>
+</div>
+
+
+
+
+   <div id="test1" class="col s12 down150px">
+<br><br>
+    
+<br>
+  <div class="row">
+  <div class="col s6"> 
+<div class="right">
+  <button  class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
+ </div>
+ </div>
+
+  <div class="col s6"> 
+<div class="left">
+  <button onclick="reset();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset 30s</span></button>
+ </div>
+ </div>
+
+ </div>
+
+<br>
+ 
+
+   <div class="row">
+  <div class="col s12 center">
+
+  <h5 class="black-text">Step 1: 30s Chair Stand Test</h5>
+
+  </div>
+  </div>
+    
+        <div class="row">
+          <div class="input-field col s6 offset-s3 center">
+            <input class="center_text" id="inputSFT1" type="text" data-length="2">
+            <label for="input_text">Input Step 1 Score</label>
+          </div>
+        </div>
+
+      
+
+
+          <div class="row">
+          <div class="col s12 center">
+
+            <a id="SFTbtnContinue1" href='#test2' class="nextButtonStep1 waves-effect amber waves-light btn"><span id="innertextStep1Next" class="white-text">Next<i class="material-icons" style="font-size:22px;">keyboard_arrow_right</i></span></a>
+           </div>
+          </div>
+
+
+
+
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+    <div id="test2" class="col s12 down150px">
+<br>
+
+
+
+<br>
+<br>
+   <div class="row">
+  <div class="col s6"> 
+<div class="right">
+  <button  class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
+ </div>
+ </div>
+
+  <div class="col s6"> 
+<div class="left">
+  <button onclick="reset();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset 30s</span></button>
+ </div>
+ </div>
+
+ </div>
+
+<br>
+ 
+  <div class="row">
+  <div class="col s12 center">
+
+  <h5 class="black-text">Step 2: 30s Arm Curl</h5>
+
+  </div>
+  </div>
+
+ 
+
+          <div class="row">
+          <div class="input-field col s6 offset-s3 center">
+            <input class="center_text" id="inputSFT2" type="text" data-length="2">
+            <label for="input_text">Input Step 2 Score</label>
+          </div>
+        </div>
+
+         
+
+           <div class="row">
+          <div class="col s12 center">
+
+            <a id="SFTbtnContinue2" href='#test3' class="nextButtonStep1 waves-effect amber waves-light btn"><span id="innertextStep1Next" class="white-text">Next<i class="material-icons" style="font-size:22px;">keyboard_arrow_right</i></span></a>
+           </div>
+          </div>
+
+           
+        
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="test3" class="col s12 down150px">
+<br>
+
+
+<br>
+<br>
+   <div class="row">
+  <div class="col s6"> 
+<div class="right">
+  <button  class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
+ </div>
+ </div>
+
+  <div class="col s6"> 
+<div class="left">
+  <button onclick="reset120();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset 120s</span></button>
+ </div>
+ </div>
+
+ </div>
+
+<br>
+ 
+  <div class="row">
+  <div class="col s12 center">
+
+  <h5 class="black-text">Step 3: Two Minute Step Test</h5>
+
+  </div>
+  </div>
+
+          <div class="row">
+          <div class="input-field col s6 offset-s3 center">
+            <input class="center_text" id="inputSFT3" type="text" data-length="2">
+            <label for="input_text">Input Step 3 Score</label>
+          </div>
+        </div>
+
+           <div class="row">
+          <div class="col s12 center">
+
+            <a id="SFTbtnContinue3" href='#test4' class="nextButtonStep1 waves-effect amber waves-light btn"><span id="innertextStep1Next" class="white-text">Next<i class="material-icons" style="font-size:22px;">keyboard_arrow_right</i></span></a>
+           </div>
+          </div>
+          
+
+    </div>
+
+
+    <div id="test4" class="col s12 down150px">
+ <br>     
+
+<br>
+<br>
+
+  <div class="row">
+  <div class="col s6"> 
+<div class="right">
+  <button  class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
+ </div>
+ </div>
+
+  <div class="col s6"> 
+<div class="left">
+  <button onclick="reset();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset</span></button>
+ </div>
+ </div>
+
+ </div>
+
+<br>
+
+  <div class="row">
+  <div class="col s12 center">
+
+  <h5 class="black-text">Step 4: Chair Sit & Reach Test</h5>
+
+  </div>
+  </div>
+ <div class="row">
+          <div class="input-field col s6 offset-s3 center">
+            <input class="center_text" id="inputSFT4" type="text" data-length="3">
+            <label for="input_text">Input Step 4 Score</label>
+          </div>
+        </div>
+
+
+               <div class="row">
+          <div class="col s12 center">
+
+            <a id="SFTbtnContinue4" href='#test5' class="nextButtonStep1 waves-effect amber waves-light btn"><span id="innertextStep1Next" class="white-text">Next<i class="material-icons" style="font-size:22px;">keyboard_arrow_right</i></span></a>
+           </div>
+          </div>
+
+          
+       
+
+
+
+    </div>
+
+
+    <div id="test5" class="col s12 down150px">
+<br>
+
+
+<br>
+<br>
+   <div class="row">
+  <div class="col s6"> 
+<div class="right">
+  <button  class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
+ </div>
+ </div>
+
+  <div class="col s6"> 
+<div class="left">
+  <button onclick="reset60();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset 60s</span></button>
+ </div>
+ </div>
+
+ </div>
+<br>
+
+<div class="row">
+  <div class="col s12 center">
+
+  <h5 class="black-text">Step 5: Timed Up and Go</h5>
+
+  </div>
+  </div>
+ 
+
+      <div class="row">
+          <div class="input-field col s6 offset-s3 center">
+            <input class="center_text" id="inputSFT5" type="text" data-length="2">
+            <label for="input_text">Input Step 5 Score</label>
+          </div>
+        </div>
+
+             <div class="row">
+          <div class="col s12 center">
+            <a id="SFTbtnContinue5" href='#test6' class="nextButtonStep1 waves-effect amber waves-light btn"><span id="innertextStep1Next" class="white-text">Next<i class="material-icons" style="font-size:22px;">keyboard_arrow_right</i></span></a>
+           </div>
+          </div>
+          
+
+    </div>
+
+
+
+    <div id="test6" class="col s12 down150px">
+   <br>  
+
+<br>
+
+
+<br>
+
+   <div class="row">
+  <div class="col s6"> 
+<div class="right">
+  <button  class="playPause waves-effect blue waves-light btn"><span class="white-text"><i class="material-icons left">timer</i>Start/Stop</span></button>
+ </div>
+ </div>
+
+  <div class="col s6"> 
+<div class="left">
+  <button onclick="reset60();"  class="resetButton1 waves-effect green waves-light btn"><span class="white-text"><i class="material-icons left">restore</i>Reset 60s</span></button>
+ </div>
+ </div>
+
+ </div>
+ 
+<br>
+
+<div class="row">
+  <div class="col s12 center">
+
+  <h5 class="black-text">Step 6: Back Scratch Test</h5>
+
+  </div>
+  </div>
+  <div class="row">
+          <div class="input-field col s6 offset-s3 center">
+            <input class="center_text" id="inputSFT6" type="text" data-length="3">
+            <label for="input_text">Input Step 6 Score</label>
+          </div>
+        </div>
+
+                    <div class="row">
+          <div class="col s12 center">
+
+            <a id="SFTbtnContinue1" class="SFTinputScoresButton waves-effect black waves-light btn" href="#modal1" onclick="calculateScore()"><span class="white-text">Report<i class="material-icons" style="font-size:28px;">format_list_numbered</i></span></a>
+           </div>
+          </div>
+
+
+          
+    
+    </div>
+  
+        
+
+    <div class="row">
+    <div class="col s12">
+      <ul class="tabs" id="sftTAB">
+        <li class="tab col s2"><a href="#test1" class="active">1</a></li>
+        <li class="tab col s2"><a  href="#test2">2</a></li>
+        <li class="tab col s2"><a href="#test3">3</a></li>
+        <li class="tab col s2"><a href="#test4">4</a></li>
+        <li class="tab col s2"><a href="#test5">5</a></li>
+        <li class="tab col s2"><a href="#test6">6</a></li>
+      </ul>
+    </div>
+    </div>
+
+      <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h5>Senior Fitness Test Report</h5>
+      <p>Print Your Report Below</p>
+    </div>
+    <div id="sftReport"></div>
+    <hr>
+
+     <div class="container">
+
+     <div class="row">
+     <
+     <div class="col s12 center">
+     <h5>Prescribed Exercises</h5>
+    <div class="chips chips-initial" label="add tags"></div>
+    </div>
+    </div>
+    <div class="col s12 center">
+    <h5>Time Stamps</h5>
+    <div id="timeStampSFTstep"></div>
+    <div id="timeStampSFTt_start"></div>
+    <div id="timeStampSFTt_stop"></div>
+    </div>
+    </div>
+   
+    <br>
+    <br>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Print</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/sftClock1.js"></script>
+  <script src="js/calculateScoresSFT.js"></script>
+  <script src="js/prescribeExcercises.js"></script>
+
+  </body>
+</html>
