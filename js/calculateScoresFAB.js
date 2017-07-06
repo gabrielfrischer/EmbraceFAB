@@ -34,8 +34,37 @@ function calculateScore(){
    var eighth_number = parseInt(document.getElementById("inputFAB8").value);
       var ninth_number = parseInt(document.getElementById("inputFAB9").value);
    var tenth_number = parseInt(document.getElementById("inputFAB10").value);
-   var result = first_number + second_number + third_number + fourth_number + fifth_number + sixth_number + seventh_number + eighth_number + ninth_number;
+   var result = first_number + second_number + third_number + fourth_number + fifth_number + sixth_number + seventh_number + eighth_number + ninth_number + tenth_number;
      
     document.getElementById("FABReport").innerHTML = "Score: " + result;
    //document.getElementById("txtresult").value = result;
             }
+
+  var data = [
+   ['Step 1', first_number],
+   ['Step 2', second_number],
+   ['Step 3', third_number]
+   ['Step 4', fourth_number],
+   ['Step 5', fifth_number],
+   ['Step 6', sixth_number]
+   ['Step 7', seventh_number],
+   ['Step 8', eighth_number],
+   ['Step 9', ninth_number]
+   ['Step 10', tenth_number]
+];
+ 
+ 
+function download_csv() {
+    var csv = 'Name,Title\n';
+    data.forEach(function(row) {
+            csv += row.join(',');
+            csv += "\n";
+    });
+ 
+    console.log(csv);
+    var hiddenElement = document.createElement('a');
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+    hiddenElement.target = '_blank';
+    hiddenElement.download = 'people.csv';
+    hiddenElement.click();
+}
